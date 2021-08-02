@@ -166,7 +166,7 @@ import { LinkedAccountConfig } from '@spacecomx/cdk-organization-billing-alarm'
 const linkedAccountConfig: LinkedAccountConfig = { ... }
 ```
 
-##### `accountId`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.accountId"></a>
+##### `account`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.account"></a>
 
 - *Type:* `string`
 
@@ -189,6 +189,17 @@ A developer-defined string that can be used to identify this alarm.
 - *Type:* `number`
 
 Enter the threshold amount in USD that must be exceeded to trigger the alarm e.g. (limit: 150).
+
+---
+
+##### `alarmName`<sup>Optional</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.alarmName"></a>
+
+- *Type:* `string`
+- *Default:* Generated name
+
+Name of the alarm.
+
+If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the alarm name (recommended).
 
 ---
 
