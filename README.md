@@ -1,6 +1,9 @@
+[![npm version](https://badge.fury.io/js/%40spacecomx%2Fcdk-organization-billing-alarm.svg)](https://badge.fury.io/js/%40spacecomx%2Fcdk-organization-billing-alarm)
+[![PyPI version](https://badge.fury.io/py/spacecomx.cdk-organization-billing-alarm.svg)](https://badge.fury.io/py/spacecomx.cdk-organization-billing-alarm)
+
 # @spacecomx/cdk-organization-billing-alarm
 
-CDK construct to monitor estimated billing charges with alerts and notifications for a multi-account AWS Organizations. It gives you the capability to monitor specific AWS Service charges, by a linked AWS account in a master/payer account. It can create customizable billing alarms for multiple linked AWS accounts within AWS Organization. It can subscribes multiple email address endpoints to an SNS Topic created by the package or it can use an existing SNS Topic Arn within the master/payer account.
+CDK construct to monitor estimated billing charges with alerts and notifications for a multi-account AWS Organizations. It gives you the capability to monitor specific AWS Service charges, by a linked AWS account in a master/payer account. It can create customizable billing alarms for multiple linked AWS accounts within AWS Organization. It can subscribe multiple email address endpoints to an SNS Topic created by the package or it can use an existing SNS Topic Arn within the master/payer account.
 
 For single AWS account billing alarm requirements, see [@spacecomx/cdk-billing-alarm](https://github.com/spacecomx/cdk-billing-alarm#readme)
 
@@ -284,8 +287,7 @@ Contributions of all kinds are welcome! Check out our [contributor's guide](http
 
 ## Alternatives
 
-- [@spacecomx/cdk-billing-alarm](https://github.com/spacecomx/cdk-billing-alarm) - used for single account billing alarm requirements and some.
-- [cdk-billing-alarm](https://github.com/spacecomx/cdk-billing-alarm)
+- [@spacecomx/cdk-billing-alarm](https://github.com/spacecomx/cdk-billing-alarm#readme) - used for single account billing alarm requirements and some.
 
 ## License
 

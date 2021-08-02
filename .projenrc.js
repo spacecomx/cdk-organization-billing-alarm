@@ -26,6 +26,7 @@ const project = new AwsCdkConstructLibrary({
     'billing-alarm',
     'aws-organizations',
     'cloudwatch',
+    'aws-cloudwatch',
     'cloudwatch-alarms',
     'sns',
   ],
