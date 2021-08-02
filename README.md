@@ -74,7 +74,7 @@ export class OrganizationBillingAlarmStack extends Stack {
     const config: MasterAccountAlarmProps = {
       alarmConfiguration: {
         topicDescription: 'Organization Billing Alarm Topic',
-        emailAddress: ['john@example.org'],
+        emailAddress: ['billing@example.org', 'admin@example.org'],
         alarmDescription: 'Consolidated Billing Alarm: All AWS Services',
         thresholdAmount: 140,
       },
@@ -111,7 +111,7 @@ export class OrganizationBillingAlarmStack extends Stack {
     super(scope, id, props);
 
     const config: MasterAccountAlarmProps = {
-      secretName: 'prod/billing/topicArn', // use existing sns topic
+      secretName: 'prod/billing/topicArn', // existing sns topic arn
       alarmConfiguration: {
         emailAddress: ['john@example.org'],
         alarmDescription: 'Consolidated Billing Alarm: All AWS Services',
@@ -152,7 +152,8 @@ export class OrganizationBillingAlarmStack extends Stack {
       secretName: 'prod/billing/topicArn',
       accountConfiguration: [
         {
-          accountId: '444455556666',
+          account: '444455556666',
+          alarmName: 'Billing Alarm (Acc: 444455556666)', // named by aws-cdk (recommended)
           alarmDescription:
             'Billing Alarm: All AWS Services (Acc: 444455556666)',
           thresholdAmount: 50,
@@ -176,12 +177,12 @@ const config: LinkedAccountAlarmProps = {
   secretName: 'prod/billing/other/topicArn', // single topic used by multiple accounts
   accountConfiguration: [
     {
-      accountId: '444455556666',
+      account: '444455556666',
       alarmDescription: 'Billing Alarm: All AWS Services (Acc: 444455556666)',
       thresholdAmount: 50,
     },
     {
-      accountId: '123456789000',
+      account: '123456789000',
       alarmDescription: 'Billing Alarm: All AWS Services (Acc: 123456789000)',
       thresholdAmount: 120,
     },
@@ -189,36 +190,28 @@ const config: LinkedAccountAlarmProps = {
 };
 ```
 
-> :small_orange_diamond: For more fine-grain billing alarm customizations, per linked AWS account, use the `emailAddress` and `awsService` options. See the code example below.
+> :small_orange_diamond: You can also link the alarm to a specific AWS Service, per linked AWS account. Use the `awsService` option. See the code example below.
 
 ```typescript
 const config: LinkedAccountAlarmProps = {
   secretName: 'prod/billing/topicArn',
   accountConfiguration: [
     {
-      accountId: '444455556666',
+      account: '444455556666',
       alarmDescription: 'Billing Alarm: All AWS Services (Acc: 444455556666)',
       thresholdAmount: 50,
-      emailAddress: ['admin@example.org', 'billing@example.org'], // notifications these emails
     },
     {
-      accountId: '123456789000',
+      account: '123456789000',
       alarmDescription: 'Billing Alarm: Amazon DynamoDB (Acc: 123456789000)',
       thresholdAmount: 120,
-      awsService: 'AmazonDynamoDB', // alarm alert - Amazon DynamoDB
-    },
-    {
-      accountId: '33356789000',
-      alarmDescription: 'Billing Alarm: Amazon APIGateway (Acc: 33356789000)',
-      thresholdAmount: 60,
-      emailAddress: ['hosting@example.com'], // notifications this email
-      awsService: 'AmazonApiGateway', // alarm alert - Amazon API Gateway
+      awsService: 'AmazonDynamoDB', // alert on Amazon DynamoDB charges
     },
   ],
 };
 ```
 
-> :small_orange_diamond: Should you need to remove a `awsService` or an `emailAddress` subscribed to a specific linked account, simply remove the configurations option.
+> :small_orange_diamond: Should you need to remove a `awsService` subscribed to a specific linked account, simply remove the `awsService` option.
 
 <a name="example_4"></a>
 
@@ -237,27 +230,9 @@ When would you use this option?
 ```typescript
 const config: MasterAccountAlarmProps = {
   alarmConfiguration: {
-    emailAddress: [], // required, so pass empty array
+    emailAddress: [], // required
     ...
   },
-};
-```
-
--OR-
-
-For removing an endpoint or endpoints for specific linked AWS account, simply remove the `emailAddress` option from the configuration. The linked account will now use the master/payer account email address subscribed to the SNS Topic e.g `secretName: 'prod/billing/topicArn` if one exists.
-
-```typescript
-const config: LinkedAccountAlarmProps = {
-  secretName: 'prod/billing/topicArn',
-  accountConfiguration: [
-    {
-      accountId: '444455556666',
-      alarmDescription: 'Billing Alarm: All AWS Services (Acc: 444455556666)',
-      thresholdAmount: 50,
-      emailAddress: ['admin@example.org'], // not required, just remove it
-    },
-  ],
 };
 ```
 
