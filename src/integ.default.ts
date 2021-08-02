@@ -74,8 +74,8 @@ export class LinkedAccountAlarmTest {
     const config: LinkedAccountAlarmProps = {
       secretName: 'test/billing/topicArn',
       accountConfiguration: [
-        { accountId: '444455556666', alarmDescription: 'Consolidated billing alarm for all AWS service charge estimates (Account: 444455556666)', thresholdAmount: 50, emailAddress: ['john@example.org'] },
-        { accountId: '123456789000', alarmDescription: 'Billing Alarm for AWS DynamoDB charge estimates only (Account: 123456789000)', thresholdAmount: 120, awsService: 'AmazonDynamoDB' },
+        { account: '444455556666', alarmDescription: 'Consolidated billing alarm for all AWS service charge estimates (Account: 444455556666)', thresholdAmount: 50, emailAddress: ['john@example.org'] },
+        { account: '123456789000', alarmDescription: 'Billing Alarm for AWS DynamoDB charge estimates only (Account: 123456789000)', thresholdAmount: 120, awsService: 'AmazonDynamoDB' },
       ],
     };
 
