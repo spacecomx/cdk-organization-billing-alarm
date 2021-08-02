@@ -2,9 +2,9 @@ const { AwsCdkConstructLibrary, ProjectType, NpmAccess } = require('projen');
 
 const RELEASE_STATUS = true;
 const RELEASE_BRANCH = 'main';
-const PRE_RELEASE = 'beta';
+const PRE_RELEASE = '';
 const MAYOR_VERSION = 1;
-const RELEASE_TO_NPM = false;
+const RELEASE_TO_NPM = true;
 const AWS_CDK_VERSION = '1.116.0';
 
 const project = new AwsCdkConstructLibrary({
@@ -50,6 +50,11 @@ const project = new AwsCdkConstructLibrary({
 
   releaseToNpm: RELEASE_TO_NPM,
   npmAccess: NpmAccess.PUBLIC,
+
+  publishToPypi: {
+    distName: 'spacecomx.cdk-organization-billing-alarm',
+    module: 'spacecomx.cdk_organization_billing-alarm',
+  },
 });
 
 const exclude = [
