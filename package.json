@@ -82,7 +82,8 @@
     "cloudwatch",
     "cloudwatch-alarms",
     "constructs",
-    "sns"
+    "sns",
+    "spacecomx"
   ],
   "main": "lib/index.js",
   "license": "MIT",
