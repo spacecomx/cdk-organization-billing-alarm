@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`integration snapshot test for linked account billing alarm configuation 1`] = `
+Object {
+  "Outputs": Object {
+    "LinkedAccountAlarmBillingAlarm123456789000TopicArnDBF6D287": Object {
+      "Description": "Billing Alarm Topic Arn.",
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            "{{resolve:secretsmanager:arn:",
+            Object {
+              "Ref": "AWS::Partition",
+            },
+            ":secretsmanager:",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            ":",
+            Object {
+              "Ref": "AWS::AccountId",
+            },
+            ":secret:test/billing/topicArn:SecretString:::}}",
+          ],
+        ],
+      },
+    },
+    "LinkedAccountAlarmBillingAlarm444455556666TopicArnB3D60750": Object {
+      "Description": "Billing Alarm Topic Arn.",
+      "Value": Object {
+        "Fn::Join": Array [
+          "",
+          Array [
+            "{{resolve:secretsmanager:arn:",
+            Object {
+              "Ref": "AWS::Partition",
+            },
+            ":secretsmanager:",
+            Object {
+              "Ref": "AWS::Region",
+            },
+            ":",
+            Object {
+              "Ref": "AWS::AccountId",
+            },
+            ":secret:test/billing/topicArn:SecretString:::}}",
+          ],
+        ],
+      },
+    },
+  },
+  "Resources": Object {
+    "LinkedAccountAlarmBillingAlarm123456789000Alarm1D6686DA": Object {
+      "Properties": Object {
+        "AlarmActions": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "{{resolve:secretsmanager:arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":secretsmanager:",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                ":",
+                Object {
+                  "Ref": "AWS::AccountId",
+                },
+                ":secret:test/billing/topicArn:SecretString:::}}",
+              ],
+            ],
+          },
+        ],
+        "AlarmDescription": "Billing Alarm for AWS DynamoDB charge estimates only (Account: 123456789000)",
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": Array [
+          Object {
+            "Name": "Currency",
+            "Value": "USD",
+          },
+          Object {
+            "Name": "LinkedAccount",
+            "Value": "123456789000",
+          },
+          Object {
+            "Name": "ServiceName",
+            "Value": "AmazonDynamoDB",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "EstimatedCharges",
+        "Namespace": "AWS/Billing",
+        "Period": 21600,
+        "Statistic": "Maximum",
+        "Threshold": 120,
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "LinkedAccountAlarmBillingAlarm444455556666AlarmC8ACEB09": Object {
+      "Properties": Object {
+        "AlarmActions": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "{{resolve:secretsmanager:arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":secretsmanager:",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                ":",
+                Object {
+                  "Ref": "AWS::AccountId",
+                },
+                ":secret:test/billing/topicArn:SecretString:::}}",
+              ],
+            ],
+          },
+        ],
+        "AlarmDescription": "Consolidated billing alarm for all AWS service charge estimates (Account: 444455556666)",
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": Array [
+          Object {
+            "Name": "Currency",
+            "Value": "USD",
+          },
+          Object {
+            "Name": "LinkedAccount",
+            "Value": "444455556666",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "EstimatedCharges",
+        "Namespace": "AWS/Billing",
+        "Period": 21600,
+        "Statistic": "Maximum",
+        "Threshold": 50,
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "LinkedAccountAlarmBillingAlarm444455556666TopicExistingNotificationTopicjohnexampleorgA00584D1": Object {
+      "Properties": Object {
+        "Endpoint": "john@example.org",
+        "Protocol": "email",
+        "TopicArn": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "{{resolve:secretsmanager:arn:",
+              Object {
+                "Ref": "AWS::Partition",
+              },
+              ":secretsmanager:",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              Object {
+                "Ref": "AWS::AccountId",
+              },
+              ":secret:test/billing/topicArn:SecretString:::}}",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::SNS::Subscription",
+    },
+  },
+}
+`;
+
+exports[`integration snapshot test for master account billing alarm configuation 1`] = `
+Object {
+  "Outputs": Object {
+    "MasterAccountAlarmBillingAlarmTopicArn8A75BB7D": Object {
+      "Description": "Billing Alarm Topic Arn.",
+      "Value": Object {
+        "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+      },
+    },
+  },
+  "Resources": Object {
+    "MasterAccountAlarmBillingAlarm7A68450F": Object {
+      "Properties": Object {
+        "AlarmActions": Array [
+          Object {
+            "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+          },
+        ],
+        "AlarmDescription": "Consolidated billing alarm for all AWS Service charges",
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": Array [
+          Object {
+            "Name": "Currency",
+            "Value": "USD",
+          },
+          Object {
+            "Name": "ServiceName",
+            "Value": "AmazonDynamoDB",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "EstimatedCharges",
+        "Namespace": "AWS/Billing",
+        "Period": 21600,
+        "Statistic": "Maximum",
+        "Threshold": 140,
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5": Object {
+      "Properties": Object {
+        "DisplayName": "Organizational billing alarm topic",
+      },
+      "Type": "AWS::SNS::Topic",
+    },
+    "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopicjohnexampleorgC426157E": Object {
+      "Properties": Object {
+        "Endpoint": "john@example.org",
+        "Protocol": "email",
+        "TopicArn": Object {
+          "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+        },
+      },
+      "Type": "AWS::SNS::Subscription",
+    },
+  },
+}
+`;
+
+exports[`integration snapshot test for master account billing alarm configuation with aws service 1`] = `
+Object {
+  "Outputs": Object {
+    "MasterAccountAlarmBillingAlarmTopicArn8A75BB7D": Object {
+      "Description": "Billing Alarm Topic Arn.",
+      "Value": Object {
+        "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+      },
+    },
+  },
+  "Resources": Object {
+    "MasterAccountAlarmBillingAlarm7A68450F": Object {
+      "Properties": Object {
+        "AlarmActions": Array [
+          Object {
+            "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+          },
+        ],
+        "AlarmDescription": "Billing Alarm for AWS DynamoDB charge estimates only (Account: 12345444000)",
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "Dimensions": Array [
+          Object {
+            "Name": "Currency",
+            "Value": "USD",
+          },
+          Object {
+            "Name": "ServiceName",
+            "Value": "AmazonDynamoDB",
+          },
+        ],
+        "EvaluationPeriods": 1,
+        "MetricName": "EstimatedCharges",
+        "Namespace": "AWS/Billing",
+        "Period": 21600,
+        "Statistic": "Maximum",
+        "Threshold": 140,
+      },
+      "Type": "AWS::CloudWatch::Alarm",
+    },
+    "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5": Object {
+      "Properties": Object {
+        "DisplayName": "Organizational billing alarm topic",
+      },
+      "Type": "AWS::SNS::Topic",
+    },
+    "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopicjohnexampleorgC426157E": Object {
+      "Properties": Object {
+        "Endpoint": "john@example.org",
+        "Protocol": "email",
+        "TopicArn": Object {
+          "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+        },
+      },
+      "Type": "AWS::SNS::Subscription",
+    },
+  },
+}
+`;
