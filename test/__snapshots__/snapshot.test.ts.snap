@@ -4,7 +4,7 @@ exports[`integration snapshot test for linked account billing alarm configuation
 Object {
   "Outputs": Object {
     "LinkedAccountAlarmBillingAlarm123456789000TopicArnDBF6D287": Object {
-      "Description": "Billing Alarm Topic Arn.",
+      "Description": "SNS Topic Arn.",
       "Value": Object {
         "Fn::Join": Array [
           "",
@@ -27,7 +27,7 @@ Object {
       },
     },
     "LinkedAccountAlarmBillingAlarm444455556666TopicArnB3D60750": Object {
-      "Description": "Billing Alarm Topic Arn.",
+      "Description": "SNS Topic Arn.",
       "Value": Object {
         "Fn::Join": Array [
           "",
@@ -145,7 +145,7 @@ Object {
       },
       "Type": "AWS::CloudWatch::Alarm",
     },
-    "LinkedAccountAlarmBillingAlarm444455556666TopicExistingNotificationTopicjohnexampleorgA00584D1": Object {
+    "LinkedAccountAlarmBillingAlarm444455556666TopicjohnexampleorgE304F0C9": Object {
       "Properties": Object {
         "Endpoint": "john@example.org",
         "Protocol": "email",
@@ -180,9 +180,9 @@ exports[`integration snapshot test for master account billing alarm configuation
 Object {
   "Outputs": Object {
     "MasterAccountAlarmBillingAlarmTopicArn8A75BB7D": Object {
-      "Description": "Billing Alarm Topic Arn.",
+      "Description": "SNS Topic Arn.",
       "Value": Object {
-        "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+        "Ref": "MasterAccountAlarmBillingAlarmTopicAFD42C2F",
       },
     },
   },
@@ -191,7 +191,7 @@ Object {
       "Properties": Object {
         "AlarmActions": Array [
           Object {
-            "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+            "Ref": "MasterAccountAlarmBillingAlarmTopicAFD42C2F",
           },
         ],
         "AlarmDescription": "Consolidated billing alarm for all AWS Service charges",
@@ -215,18 +215,18 @@ Object {
       },
       "Type": "AWS::CloudWatch::Alarm",
     },
-    "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5": Object {
+    "MasterAccountAlarmBillingAlarmTopicAFD42C2F": Object {
       "Properties": Object {
         "DisplayName": "Organizational billing alarm topic",
       },
       "Type": "AWS::SNS::Topic",
     },
-    "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopicjohnexampleorgC426157E": Object {
+    "MasterAccountAlarmBillingAlarmTopicjohnexampleorg46160FA3": Object {
       "Properties": Object {
         "Endpoint": "john@example.org",
         "Protocol": "email",
         "TopicArn": Object {
-          "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+          "Ref": "MasterAccountAlarmBillingAlarmTopicAFD42C2F",
         },
       },
       "Type": "AWS::SNS::Subscription",
@@ -239,9 +239,9 @@ exports[`integration snapshot test for master account billing alarm configuation
 Object {
   "Outputs": Object {
     "MasterAccountAlarmBillingAlarmTopicArn8A75BB7D": Object {
-      "Description": "Billing Alarm Topic Arn.",
+      "Description": "SNS Topic Arn.",
       "Value": Object {
-        "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+        "Ref": "MasterAccountAlarmBillingAlarmTopicAFD42C2F",
       },
     },
   },
@@ -250,7 +250,7 @@ Object {
       "Properties": Object {
         "AlarmActions": Array [
           Object {
-            "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+            "Ref": "MasterAccountAlarmBillingAlarmTopicAFD42C2F",
           },
         ],
         "AlarmDescription": "Billing Alarm for AWS DynamoDB charge estimates only (Account: 12345444000)",
@@ -274,18 +274,18 @@ Object {
       },
       "Type": "AWS::CloudWatch::Alarm",
     },
-    "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5": Object {
+    "MasterAccountAlarmBillingAlarmTopicAFD42C2F": Object {
       "Properties": Object {
         "DisplayName": "Organizational billing alarm topic",
       },
       "Type": "AWS::SNS::Topic",
     },
-    "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopicjohnexampleorgC426157E": Object {
+    "MasterAccountAlarmBillingAlarmTopicjohnexampleorg46160FA3": Object {
       "Properties": Object {
         "Endpoint": "john@example.org",
         "Protocol": "email",
         "TopicArn": Object {
-          "Ref": "MasterAccountAlarmBillingAlarmTopicBillingNotificationTopic34A96CA5",
+          "Ref": "MasterAccountAlarmBillingAlarmTopicAFD42C2F",
         },
       },
       "Type": "AWS::SNS::Subscription",

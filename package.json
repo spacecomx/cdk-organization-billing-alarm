@@ -47,7 +47,7 @@
     "jest-junit": "^12",
     "jsii": "^1.32.0",
     "jsii-diff": "^1.32.0",
-    "jsii-docgen": "^3.2.16",
+    "jsii-docgen": "^3.2.19",
     "jsii-pacmak": "^1.32.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
@@ -60,14 +60,14 @@
     "@aws-cdk/aws-secretsmanager": "^1.116.0",
     "@aws-cdk/aws-sns": "^1.116.0",
     "@aws-cdk/core": "^1.116.0",
-    "@spacecomx/cdk-billing-alarm": "^1.0.8",
+    "@spacecomx/cdk-billing-alarm": "^1.0.9",
     "constructs": "^3.2.27"
   },
   "dependencies": {
     "@aws-cdk/aws-secretsmanager": "^1.116.0",
     "@aws-cdk/aws-sns": "^1.116.0",
     "@aws-cdk/core": "^1.116.0",
-    "@spacecomx/cdk-billing-alarm": "^1.0.8"
+    "@spacecomx/cdk-billing-alarm": "^1.0.9"
   },
   "bundledDependencies": [],
   "keywords": [
