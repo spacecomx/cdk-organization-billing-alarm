@@ -27,7 +27,7 @@ test('ensure resources exist to create a master account alarm with new sns topic
   expectCDK(stack).to(countResources('AWS::SNS::Subscription', 1));
   expectCDK(stack).to(
     haveResourceLike('AWS::SNS::Subscription', {
-      TopicArn: { Ref: 'MasterBillingAlarmTopicBillingNotificationTopic7104B7BC' },
+      TopicArn: { Ref: 'MasterBillingAlarmTopic11ACFFE5' },
       Endpoint: 'john@example.org',
       Protocol: 'email',
     }),
@@ -37,7 +37,7 @@ test('ensure resources exist to create a master account alarm with new sns topic
   expectCDK(stack).to(
     haveResourceLike('AWS::CloudWatch::Alarm', {
       AlarmActions: [
-        { Ref: 'MasterBillingAlarmTopicBillingNotificationTopic7104B7BC' },
+        { Ref: 'MasterBillingAlarmTopic11ACFFE5' },
       ],
       AlarmDescription: 'Consolidated billing alarm for all AWS Service charges',
       ComparisonOperator: 'GreaterThanOrEqualToThreshold',
@@ -80,7 +80,7 @@ test('ensure resources exist to create a master account alarm with specific aws 
   expectCDK(stack).to(
     haveResourceLike('AWS::CloudWatch::Alarm', {
       AlarmActions: [
-        { Ref: 'MasterBillingAlarmTopicBillingNotificationTopic7104B7BC' },
+        { Ref: 'MasterBillingAlarmTopic11ACFFE5' },
       ],
       AlarmDescription: 'Billing Alarm for AWS DynamoDB charge estimates only (Account: 12345444000)',
       ComparisonOperator: 'GreaterThanOrEqualToThreshold',
