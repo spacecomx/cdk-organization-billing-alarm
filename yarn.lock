@@ -81,7 +81,7 @@
     "@aws-cdk/cx-api" "1.118.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-cloudwatch-actions@^1.116.0":
+"@aws-cdk/aws-cloudwatch-actions@^1.118.0":
   version "1.118.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-cloudwatch-actions/-/aws-cloudwatch-actions-1.118.0.tgz#4f391ea0d1a4a59fee9e785d84545eba7c4f7e45"
   integrity sha512-a/6kdkbZaCX+jURaLzb9K4E97GaCdDDVdllul/kpmdQ/xyANUe5xEEMiUrzjh7s8qQjKlOSfmufdKdsj3GrRxA==
@@ -94,7 +94,7 @@
     "@aws-cdk/core" "1.118.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-cloudwatch@1.118.0", "@aws-cdk/aws-cloudwatch@^1.116.0":
+"@aws-cdk/aws-cloudwatch@1.118.0", "@aws-cdk/aws-cloudwatch@^1.118.0":
   version "1.118.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-cloudwatch/-/aws-cloudwatch-1.118.0.tgz#50d18d8804360280a9198a09907bbee843549bd4"
   integrity sha512-VyrhQTVN0oEpjqs6SNvf/UzvQGWlDwJVyH8NGf6sFhtWMtgryHdTvM4UKp5o+a4DRicZjoAfZgG8VOqytcEMVg==
@@ -334,7 +334,7 @@
     "@aws-cdk/core" "1.118.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-sns-subscriptions@^1.116.0":
+"@aws-cdk/aws-sns-subscriptions@^1.118.0":
   version "1.118.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-sns-subscriptions/-/aws-sns-subscriptions-1.118.0.tgz#9f4d5ae7a36f478b30eae0abef1b4ab60563ad58"
   integrity sha512-wQQbPu9cMPl4LjZcA9Y4/w8fruAP6AVssSRjP5QT6HS0HHM6GiebfBpEDbLMEfz2h1vxzQiLJXdOOIGlX4rkFA==
@@ -347,7 +347,7 @@
     "@aws-cdk/core" "1.118.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-sns@1.118.0", "@aws-cdk/aws-sns@^1.116.0", "@aws-cdk/aws-sns@^1.118.0":
+"@aws-cdk/aws-sns@1.118.0", "@aws-cdk/aws-sns@^1.118.0":
   version "1.118.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-sns/-/aws-sns-1.118.0.tgz#0a15a6f7669e31a6a90c243a758acd1fa20c2ebe"
   integrity sha512-wKSgTqMltWJo7DSsDIiCAvNyOLN28vn/BqG6e+mFcHGZapduUb1pjqvMwH9LOs+Lj9NcWsRSn+bjYEV1+cN3Zg==
@@ -411,7 +411,7 @@
     string-width "^4.2.2"
     table "^6.7.1"
 
-"@aws-cdk/core@1.118.0", "@aws-cdk/core@^1.116.0", "@aws-cdk/core@^1.118.0":
+"@aws-cdk/core@1.118.0", "@aws-cdk/core@^1.118.0":
   version "1.118.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.118.0.tgz#e3e66b67f6b3ccdc806f23c0135d7060f79a393a"
   integrity sha512-AYUMUn2S05YrbpBkd7YfwzAT0zCAUdLFq1KUpg9y/pWpqGX883/JSQmT6ygoXxE5gVCaziUxpFxToFWE96SE/g==
@@ -1128,16 +1128,16 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@spacecomx/cdk-billing-alarm@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@spacecomx/cdk-billing-alarm/-/cdk-billing-alarm-1.0.9.tgz#18f8be7d9f94805ea741d2ee6f17f9296e6044ff"
-  integrity sha512-5XB0w0HIcg9zyiVcjt6L4hUqFDeXnAAkj1p2wsc3PXjRFKxtTe93tJSz5uzy5RXzrZn2KPg6Q4lcJo56E9Sc7w==
+"@spacecomx/cdk-billing-alarm@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@spacecomx/cdk-billing-alarm/-/cdk-billing-alarm-1.0.10.tgz#edb8ce358c0597603e18613ae94341fab14bf6a9"
+  integrity sha512-AjBLOsjND9JdNg69waE8CIJG6Idx11hGGL9lmafVBcvZ8lEpzMiMNiF9QSQZKcH/3nJs2C0EWZB8f9wmYuIqFQ==
   dependencies:
-    "@aws-cdk/aws-cloudwatch" "^1.116.0"
-    "@aws-cdk/aws-cloudwatch-actions" "^1.116.0"
-    "@aws-cdk/aws-sns" "^1.116.0"
-    "@aws-cdk/aws-sns-subscriptions" "^1.116.0"
-    "@aws-cdk/core" "^1.116.0"
+    "@aws-cdk/aws-cloudwatch" "^1.118.0"
+    "@aws-cdk/aws-cloudwatch-actions" "^1.118.0"
+    "@aws-cdk/aws-sns" "^1.118.0"
+    "@aws-cdk/aws-sns-subscriptions" "^1.118.0"
+    "@aws-cdk/core" "^1.118.0"
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
