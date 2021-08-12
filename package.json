@@ -15,7 +15,8 @@
     "test:update": "npx projen test:update",
     "bump": "npx projen bump",
     "unbump": "npx projen unbump",
-    "upgrade-dependencies": "npx projen upgrade-dependencies",
+    "publish:github": "npx projen publish:github",
+    "upgrade": "npx projen upgrade",
     "upgrade-projen": "npx projen upgrade-projen",
     "default": "npx projen default",
     "watch": "npx projen watch",
@@ -36,7 +37,7 @@
   "devDependencies": {
     "@aws-cdk/assert": "^1.118.0",
     "@types/jest": "^26.0.24",
-    "@types/node": "^10.17.60",
+    "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "eslint": "^7.32.0",
@@ -61,7 +62,7 @@
     "@aws-cdk/aws-sns": "^1.118.0",
     "@aws-cdk/core": "^1.118.0",
     "@spacecomx/cdk-billing-alarm": "^1.0.9",
-    "constructs": "^3.3.120"
+    "constructs": "^3.2.27"
   },
   "dependencies": {
     "@aws-cdk/aws-secretsmanager": "^1.118.0",
