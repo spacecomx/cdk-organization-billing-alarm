@@ -5,7 +5,7 @@ const RELEASE_BRANCH = 'main';
 const PRE_RELEASE = '';
 const MAYOR_VERSION = 1;
 const RELEASE_TO_NPM = true;
-const AWS_CDK_VERSION = '1.118.0';
+const AWS_CDK_VERSION = '1.119.0';
 
 const project = new AwsCdkConstructLibrary({
   name: 'cdk-organization-billing-alarm',
