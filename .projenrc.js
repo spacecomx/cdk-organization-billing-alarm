@@ -1,11 +1,17 @@
-const { AwsCdkConstructLibrary, ProjectType, NpmAccess } = require('projen');
+const {
+  AwsCdkConstructLibrary,
+  ProjectType,
+  NpmAccess,
+  DependenciesUpgradeMechanism,
+} = require('projen');
 
 const RELEASE_STATUS = true;
 const RELEASE_BRANCH = 'main';
 const PRE_RELEASE = '';
 const MAYOR_VERSION = 1;
 const RELEASE_TO_NPM = true;
-const AWS_CDK_VERSION = '1.119.0';
+const AWS_CDK_VERSION = '1.121.0';
+const AUTOMATION_TOKEN = 'GITHUB_TOKEN';
 
 const project = new AwsCdkConstructLibrary({
   name: 'cdk-organization-billing-alarm',
@@ -56,6 +62,17 @@ const project = new AwsCdkConstructLibrary({
   publishToPypi: {
     distName: 'spacecomx.cdk-organization-billing-alarm',
     module: 'spacecomx.cdk_organization_billing-alarm',
+  },
+
+  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    workflowOptions: {
+      labels: ['auto-approve', 'auto-merge'],
+      secret: AUTOMATION_TOKEN,
+    },
+  }),
+  autoApproveOptions: {
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['waynegibson'],
   },
 });
 
