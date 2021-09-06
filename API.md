@@ -6,7 +6,7 @@
 
 A construct to create a linked account billing alarm within a master/payer AWS account e.g (AWS Organization).
 
-#### Initializer <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountAlarm.Initializer"></a>
+#### Initializers <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountAlarm.Initializer"></a>
 
 ```typescript
 import { LinkedAccountAlarm } from '@spacecomx/cdk-organization-billing-alarm'
@@ -40,7 +40,7 @@ new LinkedAccountAlarm(scope: Construct, id: string, props: LinkedAccountAlarmPr
 
 A construct to create a master account billing alarm in master/payer AWS account e.g (AWS Organization).
 
-#### Initializer <a name="@spacecomx/cdk-organization-billing-alarm.MasterAccountAlarm.Initializer"></a>
+#### Initializers <a name="@spacecomx/cdk-organization-billing-alarm.MasterAccountAlarm.Initializer"></a>
 
 ```typescript
 import { MasterAccountAlarm } from '@spacecomx/cdk-organization-billing-alarm'
