@@ -1149,10 +1149,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@spacecomx/cdk-billing-alarm@^1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@spacecomx/cdk-billing-alarm/-/cdk-billing-alarm-1.0.16.tgz#fd4233b2b6ae01b1015ce29536f733a79d8e8378"
-  integrity sha512-Yh2ZouXZfuHVJV4HtDbFt5dMqSVDusH9XG7IT8sJwPv4Am45xyCO096gM2pk2SWdfThDQERHZF5NB9OUJ5NFqA==
+"@spacecomx/cdk-billing-alarm@^1.0.17":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@spacecomx/cdk-billing-alarm/-/cdk-billing-alarm-1.0.17.tgz#c14c0bfb6798b7851d47513ba0fc29a18fa8468e"
+  integrity sha512-3la9VmSKOQNUmIBLGTc6Y54R5ERZRDDrd3vLqbuYYESQsG1EQXS9JQQy/O+zmk8s0aS1YojZRlK6pNxUmZztFw==
   dependencies:
     "@aws-cdk/aws-cloudwatch" "^1.123.0"
     "@aws-cdk/aws-cloudwatch-actions" "^1.123.0"
