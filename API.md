@@ -84,6 +84,10 @@ const alarmConfig: AlarmConfig = { ... }
 
 ##### `alarmDescription`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.AlarmConfig.property.alarmDescription"></a>
 
+```typescript
+public readonly alarmDescription: string;
+```
+
 - *Type:* `string`
 
 Description for the alarm.
@@ -94,6 +98,10 @@ A developer-defined string that can be used to identify this alarm.
 
 ##### `emailAddress`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.AlarmConfig.property.emailAddress"></a>
 
+```typescript
+public readonly emailAddress: string[];
+```
+
 - *Type:* `string`[]
 - *Default:* Not configured
 
@@ -103,6 +111,10 @@ The email address that will be used to subcribe to the SNS topic for billing ale
 
 ##### `thresholdAmount`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.AlarmConfig.property.thresholdAmount"></a>
 
+```typescript
+public readonly thresholdAmount: number;
+```
+
 - *Type:* `number`
 
 Enter the threshold amount in USD that must be exceeded to trigger the alarm e.g. (limit: 150).
@@ -110,6 +122,10 @@ Enter the threshold amount in USD that must be exceeded to trigger the alarm e.g
 ---
 
 ##### `awsService`<sup>Optional</sup> <a name="@spacecomx/cdk-organization-billing-alarm.AlarmConfig.property.awsService"></a>
+
+```typescript
+public readonly awsService: string;
+```
 
 - *Type:* `string`
 - *Default:* Not configured.
@@ -119,6 +135,10 @@ The AWS Service to associate the alarm with e.g (AmazonDynamoDB).
 ---
 
 ##### `topicDescription`<sup>Optional</sup> <a name="@spacecomx/cdk-organization-billing-alarm.AlarmConfig.property.topicDescription"></a>
+
+```typescript
+public readonly topicDescription: string;
+```
 
 - *Type:* `string`
 
@@ -140,6 +160,10 @@ const linkedAccountAlarmProps: LinkedAccountAlarmProps = { ... }
 
 ##### `accountConfiguration`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountAlarmProps.property.accountConfiguration"></a>
 
+```typescript
+public readonly accountConfiguration: LinkedAccountConfig[];
+```
+
 - *Type:* [`@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig`](#@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig)[]
 
 Account configuration to configure linked account billing alarms with an exsiting SNS topic.
@@ -147,6 +171,10 @@ Account configuration to configure linked account billing alarms with an exsitin
 ---
 
 ##### `secretName`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountAlarmProps.property.secretName"></a>
+
+```typescript
+public readonly secretName: string;
+```
 
 - *Type:* `string`
 
@@ -168,6 +196,10 @@ const linkedAccountConfig: LinkedAccountConfig = { ... }
 
 ##### `account`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.account"></a>
 
+```typescript
+public readonly account: string;
+```
+
 - *Type:* `string`
 
 Account id which this metric comes from.
@@ -175,6 +207,10 @@ Account id which this metric comes from.
 ---
 
 ##### `alarmDescription`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.alarmDescription"></a>
+
+```typescript
+public readonly alarmDescription: string;
+```
 
 - *Type:* `string`
 
@@ -186,6 +222,10 @@ A developer-defined string that can be used to identify this alarm.
 
 ##### `thresholdAmount`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.thresholdAmount"></a>
 
+```typescript
+public readonly thresholdAmount: number;
+```
+
 - *Type:* `number`
 
 Enter the threshold amount in USD that must be exceeded to trigger the alarm e.g. (limit: 150).
@@ -193,6 +233,10 @@ Enter the threshold amount in USD that must be exceeded to trigger the alarm e.g
 ---
 
 ##### `alarmName`<sup>Optional</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.alarmName"></a>
+
+```typescript
+public readonly alarmName: string;
+```
 
 - *Type:* `string`
 - *Default:* Generated name
@@ -205,6 +249,10 @@ If you don't specify a name, AWS CloudFormation generates a unique physical ID a
 
 ##### `awsService`<sup>Optional</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.awsService"></a>
 
+```typescript
+public readonly awsService: string;
+```
+
 - *Type:* `string`
 - *Default:* Not configured.
 
@@ -213,6 +261,10 @@ The AWS Service to associate the alarm with e.g (AmazonDynamoDB).
 ---
 
 ##### `emailAddress`<sup>Optional</sup> <a name="@spacecomx/cdk-organization-billing-alarm.LinkedAccountConfig.property.emailAddress"></a>
+
+```typescript
+public readonly emailAddress: string[];
+```
 
 - *Type:* `string`[]
 - *Default:* Not configured
@@ -233,6 +285,10 @@ const masterAccountAlarmProps: MasterAccountAlarmProps = { ... }
 
 ##### `alarmConfiguration`<sup>Required</sup> <a name="@spacecomx/cdk-organization-billing-alarm.MasterAccountAlarmProps.property.alarmConfiguration"></a>
 
+```typescript
+public readonly alarmConfiguration: AlarmConfig;
+```
+
 - *Type:* [`@spacecomx/cdk-organization-billing-alarm.AlarmConfig`](#@spacecomx/cdk-organization-billing-alarm.AlarmConfig)
 
 Alarm configuration options to configure the AWS master/payer account billing alarm, with SNS topic or an existing Topic Arn.
@@ -240,6 +296,10 @@ Alarm configuration options to configure the AWS master/payer account billing al
 ---
 
 ##### `secretName`<sup>Optional</sup> <a name="@spacecomx/cdk-organization-billing-alarm.MasterAccountAlarmProps.property.secretName"></a>
+
+```typescript
+public readonly secretName: string;
+```
 
 - *Type:* `string`
 
